@@ -1,0 +1,25 @@
+schemaVersion: 2.2.0
+metadata:
+  name: 'jacksonDefault'
+attributes:
+  space:
+    # regular, large, xlarge
+    instanceType: regular
+    # a default IDE for the project
+    editor:
+      type: Fleet
+    warmup:
+      startOn:
+      - type: schedule
+        cron: '0 0 0-2/1 ? * * *'
+      - type: schedule
+        cron: '0 0 7,9-17/2 ? * MON-FRI *'
+      - type: schedule
+        cron: '0 0 20-23/1 ? * MON,WED,FRI *'
+      - type: schedule
+        cron: '0 0 18-23/1 ? * TUE,THU *'
+      - type: schedule
+        cron: '0 0/30 7-12 ? * SAT,SUN *'
+      - type: schedule
+        cron: '0 0 16-23/1 ? * SAT,SUN *'
+      - type: gitPush
