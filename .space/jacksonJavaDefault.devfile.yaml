@@ -1,13 +1,13 @@
 schemaVersion: 2.2.0
 metadata:
-  name: 'jacksonDefault'
+  name: 'jacksonJavaDefault'
 attributes:
   space:
     # regular, large, xlarge
     instanceType: regular
     # a default IDE for the project
     editor:
-      type: Fleet
+      type: Idea
     warmup:
       startOn:
       - type: schedule
